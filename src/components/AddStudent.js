@@ -1,12 +1,11 @@
 import{useState} from "react";
 import { useNavigate } from "react-router-dom";
-//import {createStudent} from "../api";
 import { createStudent } from "../api";
 
 function AddStudent(){
     const[name,setName]=useState("");
     const[email,setEmail]=useState("");
-    const navigate=useNavigate(); //hook
+    const navigate=useNavigate(); 
 
     const submit=async(e)=>{
         e.preventDefault();
