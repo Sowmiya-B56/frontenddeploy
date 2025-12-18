@@ -1,0 +1,8 @@
+import axios from "axios" //npm install axios
+//import { data } from "react-router-dom";
+const API="http://localhost:5000/api/students";
+export const getStudents=async()=>axios.get(API);
+export const createStudent=(data)=>axios.post(API,data);
+export const deleteStudent=(id)=>axios.delete(`${API}/${id}`);
+export const getStudent=(id)=>axios.get(`${API}/${id}`);
+export const updateStudent=(id,data)=>axios.put(`${API}/${id}`,data);
